@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Setembro Amarelo | Acolhimento e acessibilidade</title>
+<meta name="theme-color" content="#fff7d0">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Escuta, acolhimento, valorização da vida e busca de ajuda.">
+<style>
+:root{--yellow:#ffd43b;--yellow2:#fff1a6;--ink:#111820;--muted:#66727b;--cream:#fffdf7;--green:#18876c;--white:#fff;--line:#e8e6dd;--shadow:0 22px 60px #11182018;--r:28px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Arial,sans-serif}a{text-decoration:none;color:inherit}button{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:fixed;z-index:20;top:0;left:0;right:0;height:76px;transition:.25s}
+header.scrolled{background:#fffdf7ee;backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;display:flex;align-items:center;gap:9px}.logo-mark{width:36px;height:36px;border-radius:12px;background:var(--yellow);display:grid;place-items:center}
+nav{display:flex;gap:24px;font-size:14px;font-weight:800}nav a{opacity:.72}nav a:hover{opacity:1}.menu{display:none;border:0;background:none;font-size:25px}
+.nav-help{background:var(--ink);color:#fff;border:0;border-radius:12px;padding:11px 16px;font-weight:800}
+.hero{min-height:100vh;padding:125px 0 70px;background:radial-gradient(circle at 80% 20%,#fff0a0 0 12%,transparent 33%),linear-gradient(135deg,#fffdf7,#fff7d0 60%,#ffe47a);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#ffffff50;right:-230px;bottom:-240px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.8px;color:#826800;display:flex;gap:9px;align-items:center;margin-bottom:17px}.eyebrow:before{content:"";width:23px;height:3px;background:var(--yellow);border-radius:4px}
+h1{font-size:clamp(50px,7vw,82px);line-height:.94;letter-spacing:-4px}.under{position:relative;z-index:1}.under:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:11px;border-radius:20px;background:var(--yellow);z-index:-1;transform:rotate(-1deg)}
+.lead{font-size:19px;color:#5e6870;max-width:590px;margin:26px 0 28px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 19px;border-radius:14px;border:1px solid var(--line);font-weight:900;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #11182018}.primary{background:var(--ink);color:#fff}.secondary{background:#fff}
+.note{margin-top:20px;color:#68716e;font-size:13px;display:flex;gap:9px;align-items:center}.pulse{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 7px #18876c1c}
+.visual{height:550px;position:relative}.art{position:absolute;inset:20px 25px;border-radius:38px;background:linear-gradient(145deg,#ffe26c,#fff6bd);box-shadow:var(--shadow);overflow:hidden;transform:rotate(2deg)}
+.art svg{width:100%;height:100%;display:block}.bubble{position:absolute;background:#fffefbf2;padding:15px 18px;border-radius:18px;box-shadow:var(--shadow);font-weight:800;z-index:2}.bubble small{display:block;color:var(--muted);font-weight:500;font-size:12px}.b1{right:-4px;top:55px;animation:float 4s ease-in-out infinite}.b2{left:-5px;bottom:65px;animation:float 5s ease-in-out infinite reverse}.sticker{position:absolute;right:15px;bottom:5px;background:var(--yellow);width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:900;font-size:11px;line-height:1.05;transform:rotate(-8deg)}
+@keyframes float{50%{transform:translateY(-10px)}}
+section{padding:95px 0}.head{max-width:760px;margin-bottom:40px}.head h2{font-size:clamp(36px,4.5vw,57px);line-height:1;letter-spacing:-3px;margin-bottom:14px}.head p{color:var(--muted);font-size:17px}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{min-height:300px;padding:29px;border-radius:var(--r);background:#fff;border:1px solid var(--line);position:relative;overflow:hidden;transition:.25s}.card:nth-child(2){background:#fff8d0}.card:nth-child(3){background:#eef8f4}.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.card-num{font-size:12px;font-weight:900;color:#8a7000}.card h3{font-size:25px;margin:70px 0 8px}.card p{color:var(--muted)}.orb{position:absolute;width:130px;height:130px;background:var(--yellow);border-radius:50%;right:-35px;bottom:-40px}
+.dark{background:#121820;color:#fff}.dark .head p{color:#bcc4ca}.two{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.illustration{border-radius:32px;background:#1d2730;min-height:430px;overflow:hidden}.illustration svg{width:100%;height:100%;display:block}.dark p{color:#bbc3ca}.checks{display:grid;gap:14px;margin-top:22px}.check{display:flex;gap:12px}.check b{color:var(--yellow)}
+.lightgreen{background:#f3f8f5}.signs{display:grid;gap:12px}.sign{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;gap:13px}.sign b{background:var(--yellow2);width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}.sign p{color:var(--muted);font-size:14px}.tip{background:#fff;border-radius:28px;padding:35px;box-shadow:var(--shadow)}.tip h3{font-size:28px;margin-bottom:10px}
+.quote{background:linear-gradient(135deg,var(--yellow),#fff0a0);text-align:center}.quote blockquote{max-width:900px;margin:auto;font-size:clamp(34px,5vw,60px);font-weight:900;line-height:1.03;letter-spacing:-3px}.quote small{display:block;margin-top:20px;color:#655a22}
+.help{background:#f3f8f5}.help-card{background:#fff;border-radius:32px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;box-shadow:var(--shadow)}.help-card h2{font-size:clamp(34px,4vw,52px);line-height:1;letter-spacing:-2px}.help-card p{color:var(--muted);max-width:700px;margin:13px 0}.number{font-size:clamp(75px,10vw,125px);font-weight:900;color:var(--yellow);-webkit-text-stroke:2px var(--ink);line-height:.8}
+.faq{max-width:850px;border-top:1px solid var(--line)}.item{border-bottom:1px solid var(--line)}.question{width:100%;background:none;border:0;padding:21px 0;text-align:left;font-weight:900;display:flex;justify-content:space-between;cursor:pointer;font-size:17px}.question span{font-size:24px;color:#8b7000;transition:.2s}.answer{display:grid;grid-template-rows:0fr;transition:.3s}.answer div{overflow:hidden;color:var(--muted);padding-right:20px}.item.open .answer{grid-template-rows:1fr}.item.open .question span{transform:rotate(45deg)}
+.final{padding:85px 0}.final-box{background:var(--ink);color:#fff;border-radius:34px;text-align:center;padding:70px 25px;position:relative;overflow:hidden}.final-box:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:var(--yellow);right:-130px;top:-170px}.final-box h2,.final-box p,.final-box a{position:relative;z-index:1}.final-box h2{font-size:clamp(38px,5vw,63px);line-height:1;letter-spacing:-3px}.final-box p{max-width:650px;margin:15px auto 25px;color:#bbc3ca}
+footer{background:#0c1014;color:#9da7af;padding:32px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+#top{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border:0;border-radius:50%;background:var(--ink);color:#fff;display:none;place-items:center;cursor:pointer;z-index:30}
+@media(max-width:850px){nav,.nav-help{display:none}.menu{display:block}.navlinks-open{display:flex;position:absolute;top:76px;left:0;right:0;background:var(--cream);padding:20px 4%;flex-direction:column}.hero-grid,.two{grid-template-columns:1fr}.visual{height:440px}.cards{grid-template-columns:1fr}.card{min-height:250px}.card h3{margin-top:45px}.help-card{grid-template-columns:1fr}.number{font-size:82px}}
+@media(max-width:550px){h1{letter-spacing:-3px}.hero{padding-top:115px}.visual{height:370px}.art{inset:12px 4px}.bubble{padding:12px;font-size:13px}.sticker{width:76px;height:76px;font-size:9px}.section{padding:70px 0}}
+
+
+.vault-card{max-width:820px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(20px,4vw,36px);box-shadow:var(--shadow)}
+.vault-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:22px}.vault-top h3{font-size:26px}.vault-top p,.vault-hint{color:var(--muted);font-size:14px}.vault-lock{background:#eaf7f1;color:#145b45;padding:7px 11px;border-radius:10px;font-size:12px;font-weight:900;white-space:nowrap}
+.vault-form{display:grid;gap:10px;margin:18px 0}.vault-form label{font-weight:800;margin-top:6px}.vault-form input,.vault-form textarea{width:100%;border:1px solid #aeb8b2;border-radius:12px;padding:13px;font:inherit;background:#fff;color:#111820}.vault-form textarea{resize:vertical}.vault-form button{justify-self:start}.vault-warning{margin-top:24px;padding:15px;background:#fff7d9;border-left:5px solid #c49b00;border-radius:10px;font-size:13px;color:#423600}.vault-help{max-width:820px;margin:20px auto 0;padding:20px;border-radius:16px;background:#eaf7f1;color:#123e31}.vault-list-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:25px 0 12px}.vault-list-head h4{font-size:20px}.notes-list{display:grid;gap:12px}.note-card{padding:17px;border:1px solid var(--line);border-radius:15px;background:#fff}.note-card h5{font-size:17px;margin-bottom:5px}.note-card p{white-space:pre-wrap;overflow-wrap:anywhere;color:#46525a}.note-card small{display:block;color:#68727a;margin-top:10px}.note-card button{margin-top:10px;border:1px solid #b8c0c5;background:#fff;border-radius:9px;padding:8px 12px;font-weight:800;cursor:pointer}
+@media(max-width:550px){.vault-top,.vault-list-head{flex-direction:column;align-items:stretch}.vault-lock{align-self:flex-start}}
+.high-contrast .vault-card,.high-contrast .note-card{background:#fff!important;color:#000!important;border:2px solid #000!important}.high-contrast .vault-card p,.high-contrast .note-card p{color:#000!important}.high-contrast .vault-warning{background:#fff!important;color:#000!important;border:2px solid #000!important}
+
+/* Acessibilidade: recursos visuais e ajustes de leitura */
+.access-tools{position:fixed;right:18px;bottom:78px;z-index:40;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.access-toggle{border:0;border-radius:999px;background:#121820;color:#fff;padding:12px 16px;font-weight:900;box-shadow:0 8px 25px #11182030;cursor:pointer}
+.access-panel{display:none;width:min(300px,calc(100vw - 36px));background:#fff;border:2px solid #121820;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.access-panel.open{display:grid;gap:9px}
+.access-panel strong{font-size:16px}
+.access-panel button{border:1px solid #c9c9c9;border-radius:10px;background:#fff;color:#111820;padding:10px;text-align:left;font-weight:800;cursor:pointer}
+.access-panel button:focus-visible,.access-toggle:focus-visible,a:focus-visible,button:focus-visible{outline:4px solid #16866a;outline-offset:3px}
+.deaf-info{background:#eaf3ff;border:1px solid #bfd7f4;border-radius:22px;padding:25px;margin-top:28px}
+.deaf-info h3{font-size:25px;margin-bottom:8px;color:#142c48}
+.deaf-info p{color:#30465e;margin:8px 0}
+.visual-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.visual-step{background:#fff;border-radius:14px;padding:16px;border:1px solid #d5e2f1}
+.visual-step b{display:block;color:#145b91;margin-bottom:5px}
+.visual-alert{border-left:6px solid #16866a;background:#eaf7f1;border-radius:12px;padding:16px;margin-top:16px;color:#123e31}
+body.high-contrast{--cream:#fff;--ink:#000;--muted:#222;--line:#555}
+body.high-contrast a,body.high-contrast p,body.high-contrast small{color:inherit}
+body.large-text{font-size:1.12rem}
+body.large-text p,body.large-text a,body.large-text button{font-size:1.08em}
+body.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:650px){.visual-steps{grid-template-columns:1fr}.access-tools{right:10px;bottom:70px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* V5.0 — acessibilidade ampliada */
+.skip-link{position:fixed;left:12px;top:-80px;z-index:1000;background:#111820;color:#fff;padding:13px 18px;border-radius:0 0 12px 12px;font-weight:900}
+.skip-link:focus{top:0}
+:focus-visible{outline:3px solid #087f5b!important;outline-offset:4px!important}
+.access-tools{bottom:86px}
+.access-panel{max-height:min(78vh,690px);overflow:auto}
+.access-panel .tool-group{display:grid;gap:6px;padding:8px 0;border-top:1px solid #e6e6e6}
+.access-panel .tool-group strong{font-size:13px;color:#4b5563}
+.access-panel button[aria-pressed="true"]{background:#e5f4ed;border-color:#087f5b}
+.access-panel .tool-row{display:flex;gap:7px;flex-wrap:wrap}
+.access-panel .tool-row button{flex:1;text-align:center}
+.access-panel .reset-btn{background:#111820;color:#fff;text-align:center}
+body.high-contrast{--cream:#fff;--ink:#000;--muted:#171717;--line:#444;--green:#005c43;background:#fff;color:#000}
+body.high-contrast .card,body.high-contrast .tip,body.high-contrast .help-card,body.high-contrast .access-panel{border:2px solid #000}
+body.high-contrast a{ text-decoration:underline}
+body.large-text{font-size:1.18rem}
+body.large-text p,body.large-text li,body.large-text a,body.large-text button{font-size:1.08em}
+body.extra-spacing{line-height:2}
+body.extra-spacing p,body.extra-spacing li{margin-bottom:.65em}
+body.link-highlight a:not(.btn){text-decoration:underline!important;text-decoration-thickness:2px!important;background:#fff2a8!important;color:#111!important}
+body.dyslexia-friendly{letter-spacing:.025em;word-spacing:.08em;line-height:1.85}
+body.dyslexia-friendly p,body.dyslexia-friendly li{max-width:75ch}
+body.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.learning{background:#fff}
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.learn-card{padding:25px;border:1px solid var(--line);border-radius:22px;background:#fffdf7}
+.learn-icon{font-size:34px}
+.learn-card h3{font-size:22px;margin:12px 0}
+.learn-card ul{padding-left:20px;color:var(--muted);display:grid;gap:9px}
+.glossary{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;margin-top:30px;padding:30px;background:#f3f8f5;border-radius:24px}
+.glossary h3{font-size:27px}
+.glossary p{color:var(--muted)}
+.glossary-items{display:grid;gap:9px}
+.glossary details{background:white;border:1px solid var(--line);border-radius:12px;padding:14px}
+.glossary summary{font-weight:900;cursor:pointer}
+.glossary details p{margin-top:8px}
+.quiz-section{background:#fff8d9}
+.quiz{max-width:760px;margin:auto;padding:30px;background:white;border-radius:24px;box-shadow:var(--shadow)}
+.quiz h3{font-size:25px;margin-bottom:18px}
+.quiz-options{display:grid;gap:10px}
+.quiz-options button{padding:15px;border:2px solid #d7d7d7;border-radius:13px;background:#fff;text-align:left;cursor:pointer;font-weight:700}
+.quiz-options button:hover{border-color:#087f5b}
+.quiz-options button.correct{background:#e7f7ee;border-color:#087f5b}
+.quiz-options button.incorrect{background:#fff0ed;border-color:#a83220}
+.quiz-feedback{min-height:52px;margin:15px 0;color:#35414a}
+.quiz-count{font-size:13px;color:var(--muted);margin-top:12px}
+.access-feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:30px 0}
+.access-feature{padding:22px;border-radius:18px;background:#fff;border:1px solid #dfe8e2}
+.access-feature>span{font-size:30px}
+.access-feature h3{margin:8px 0;font-size:20px}
+.access-feature p{font-size:14px;color:var(--muted);margin-bottom:10px}
+.access-feature a{font-weight:900;color:#145b91;text-decoration:underline}
+.accessibility-note{margin-top:18px;padding:18px;border:1px solid #c9d9ce;border-radius:14px;color:#234b35;background:#fff}
+#readStatus{font-size:12px;color:#4b5563}
+#top{bottom:20px}
+@media(max-width:900px){.access-feature-grid{grid-template-columns:repeat(2,1fr)}.learn-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.access-tools{right:10px;bottom:75px}.learn-grid,.glossary,.access-feature-grid{grid-template-columns:1fr}.glossary{padding:20px}.quiz{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+/* Correção do modo de alto contraste: contraste definido por tipo de fundo */
+body.high-contrast{background:#fff!important;color:#000!important}
+body.high-contrast h1,body.high-contrast h2,body.high-contrast h3,
+body.high-contrast h4,body.high-contrast p,body.high-contrast li,
+body.high-contrast span,body.high-contrast small,body.high-contrast label,
+body.high-contrast summary,body.high-contrast strong,
+body.high-contrast .eyebrow,body.high-contrast .lead,
+body.high-contrast .note,body.high-contrast .head p,
+body.high-contrast .card p,body.high-contrast .sign p,
+body.high-contrast .answer,body.high-contrast .answer div,
+body.high-contrast .learn-card,body.high-contrast .glossary,
+body.high-contrast .access-feature,body.high-contrast .deaf-info,
+body.high-contrast .visual-step,body.high-contrast .visual-alert,
+body.high-contrast .accessibility-note{color:#000!important}
+body.high-contrast section:not(.dark):not(.final):not(.quote),
+body.high-contrast .card,body.high-contrast .tip,
+body.high-contrast .help-card,body.high-contrast .learn-card,
+body.high-contrast .access-feature,body.high-contrast .glossary,
+body.high-contrast .visual-step,body.high-contrast .deaf-info,
+body.high-contrast .accessibility-note{background:#fff!important}
+body.high-contrast .dark,body.high-contrast .dark h1,
+body.high-contrast .dark h2,body.high-contrast .dark h3,
+body.high-contrast .dark p,body.high-contrast .dark li,
+body.high-contrast .dark span,body.high-contrast .dark small,
+body.high-contrast .final-box,body.high-contrast .final-box h2,
+body.high-contrast .final-box p,body.high-contrast footer,
+body.high-contrast footer *{color:#fff!important}
+body.high-contrast .dark{background:#000!important}
+body.high-contrast .final-box,body.high-contrast footer{background:#000!important;border:2px solid #fff}
+body.high-contrast .quote{background:#fff!important;color:#000!important;border-block:3px solid #000}
+body.high-contrast .quote blockquote,body.high-contrast .quote small{color:#000!important}
+body.high-contrast .btn.primary,body.high-contrast .nav-help,
+body.high-contrast .access-toggle,body.high-contrast .reset-btn,
+body.high-contrast #top{background:#000!important;color:#fff!important;border:2px solid #fff}
+body.high-contrast .btn.secondary,body.high-contrast .access-panel button{
+ background:#fff!important;color:#000!important;border:2px solid #000!important
+}
+body.high-contrast a{color:#000!important;text-decoration:underline!important}
+body.high-contrast .dark a,body.high-contrast .final-box a,body.high-contrast footer a{color:#fff!important}
+body.high-contrast .access-panel{background:#fff!important;color:#000!important;border:3px solid #000!important}
+body.high-contrast .access-panel strong,body.high-contrast .access-panel span{color:#000!important}
+body.high-contrast .number{color:#fff!important;-webkit-text-stroke:2px #000}
+body.high-contrast .quiz-options button{background:#fff!important;color:#000!important;border:2px solid #000!important}
+body.high-contrast .quiz-feedback{color:#000!important}
+body.high-contrast .quiz-options button.correct{background:#e5f5e9!important}
+body.high-contrast .quiz-options button.incorrect{background:#ffe9e5!important}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header id="header"><div class="container nav">
+<a class="logo" href="#inicio"><span class="logo-mark">♥</span> Setembro Amarelo</a>
+<nav id="nav" aria-label="Navegação principal"><a href="#sobre">Sobre</a><a href="#acolher">Acolher</a><a href="#sinais">Sinais</a><a href="#ajuda">Ajuda</a><a href="#aprender">Aprender</a><a href="#acessibilidade">Acessibilidade</a><a href="#seguranca">Segurança</a><a href="#recados">Recados privados</a></nav>
+<a class="nav-help" href="#ajuda">Preciso de ajuda</a><button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main id="conteudo">
+<section class="hero"><div class="container hero-grid">
+<div class="reveal"><div class="eyebrow">Campanha de valorização da vida</div><h1>Você importa.<br><span class="under">Sua história importa.</span></h1><p class="lead">Falar sobre o que sentimos pode ser difícil. Mas ninguém deveria precisar carregar tudo sozinho. Informação, escuta e acolhimento podem abrir caminhos.</p><div class="actions"><a class="btn primary" href="#ajuda">Encontrar apoio →</a><a class="btn secondary" href="#acolher">Aprender a acolher</a></div><div class="note"><span class="pulse"></span> Um lembrete para setembro — e para todos os dias.</div></div>
+<div class="visual reveal"><div class="art" aria-hidden="true">
+<svg aria-hidden="true" focusable="false" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+<circle cx="470" cy="105" r="75" fill="#fff8c9"/><circle cx="470" cy="105" r="43" fill="#ffd43b"/>
+<path d="M0 510 Q120 400 240 475 T600 430 V600 H0Z" fill="#fff8d5"/>
+<circle cx="205" cy="245" r="54" fill="#f2b38f"/><path d="M145 250 Q155 170 210 175 Q265 180 268 252" fill="#2a3037"/>
+<path d="M145 310 Q205 265 268 310 L300 510 H115Z" fill="#f4c542"/>
+<circle cx="375" cy="270" r="50" fill="#c98262"/><path d="M320 265 Q325 190 385 195 Q430 205 430 270" fill="#5b3a2f"/>
+<path d="M322 330 Q375 290 430 330 L475 510 H285Z" fill="#16866a"/>
+<path d="M270 350 Q300 325 330 350" fill="none" stroke="#111820" stroke-width="14" stroke-linecap="round"/>
+<path d="M235 405 Q300 455 370 400" fill="none" stroke="#111820" stroke-width="13" stroke-linecap="round"/>
+<path d="M95 120 Q180 55 265 120" fill="none" stroke="#ffd43b" stroke-width="18" stroke-linecap="round"/>
+<path d="M110 125 L90 160 M250 125 L270 160" stroke="#ffd43b" stroke-width="14" stroke-linecap="round"/>
+</svg></div><div class="bubble b1">Escute sem julgar.<small>Presença também é cuidado.</small></div><div class="bubble b2">💛 Você não está sozinho.<small>Pedir ajuda é coragem.</small></div><div class="sticker">VALORIZE<br>A VIDA</div></div>
+</div></section>
+
+<section id="sobre"><div class="container"><div class="head reveal"><div class="eyebrow">O que realmente importa</div><h2>Uma conversa pode começar com uma simples pergunta.</h2><p>O Setembro Amarelo amplia o diálogo sobre valorização da vida, prevenção do suicídio e importância de procurar ajuda.</p></div><div class="cards">
+<article class="card reveal"><div class="card-num">01 / ESCUTA</div><h3>Ouvir de verdade</h3><p>Deixe espaço para a pessoa falar. Você não precisa encontrar a resposta perfeita.</p><div class="orb"></div></article>
+<article class="card reveal"><div class="card-num">02 / ACOLHIMENTO</div><h3>Levar a sério</h3><p>Evite julgamentos e comparações. Validar o sofrimento ajuda a criar confiança.</p><div class="orb"></div></article>
+<article class="card reveal"><div class="card-num">03 / APOIO</div><h3>Buscar ajuda</h3><p>Pessoas de confiança e profissionais podem fazer parte de uma rede de cuidado.</p><div class="orb"></div></article></div></div></section>
+
+<section id="acolher" class="dark"><div class="container two"><div class="illustration reveal"><svg aria-hidden="true" focusable="false" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="500" fill="#1d2730"/><circle cx="160" cy="160" r="60" fill="#f0ad88"/><circle cx="410" cy="175" r="58" fill="#c98262"/><path d="M90 235 Q160 190 230 240 L270 450 H45Z" fill="#f2c63e"/><path d="M345 240 Q410 195 475 245 L550 450 H300Z" fill="#16866a"/><path d="M235 295 Q300 250 365 295" fill="none" stroke="#ffd43b" stroke-width="18" stroke-linecap="round"/><path d="M190 95 Q160 55 130 95 M430 100 Q400 60 370 100" fill="none" stroke="#ffd43b" stroke-width="12" stroke-linecap="round"/></svg></div><div class="reveal"><div class="eyebrow" style="color:var(--yellow)">Como acolher alguém</div><h2>Você não precisa ter todas as respostas.</h2><p>Se alguém próximo estiver passando por um momento difícil, pequenas atitudes podem fazer diferença.</p><div class="checks"><div class="check"><b>01</b><span>Escolha um momento tranquilo para conversar.</span></div><div class="check"><b>02</b><span>Escute com atenção e sem julgar.</span></div><div class="check"><b>03</b><span>Não minimize a dor.</span></div><div class="check"><b>04</b><span>Incentive a busca de apoio quando necessário.</span></div></div></div></div></section>
+
+<section id="sinais" class="lightgreen"><div class="container two"><div class="reveal"><div class="eyebrow">Atenção e cuidado</div><h2>Algumas mudanças merecem ser levadas a sério.</h2><p style="color:var(--muted);margin-bottom:23px">Não existe uma lista única de sinais. Mudanças importantes no comportamento ou sofrimento intenso podem indicar necessidade de apoio.</p><div class="signs"><div class="sign"><b>01</b><div><strong>Isolamento</strong><p>Afastamento repentino de pessoas e atividades.</p></div></div><div class="sign"><b>02</b><div><strong>Mudanças marcantes</strong><p>Alterações intensas de humor, rotina ou comportamento.</p></div></div><div class="sign"><b>03</b><div><strong>Desesperança</strong><p>Falas que demonstram sofrimento profundo ou falta de perspectiva.</p></div></div></div></div><div class="tip reveal"><h3>O que fazer?</h3><p>Converse com cuidado, escute e incentive apoio. Se houver risco imediato, procure ajuda de emergência e não deixe a pessoa sozinha.</p><br><a class="btn primary" href="#ajuda">Ver opções de ajuda →</a></div></div></section>
+
+<section class="quote"><div class="container reveal"><blockquote>“Estar presente pode não resolver tudo. Mas pode fazer alguém perceber que não precisa enfrentar tudo sozinho.”</blockquote><small style="display:block;margin-top:20px;color:#655a22;text-align:center">Uma mensagem de acolhimento.</small></div></section>
+
+<section id="ajuda" class="help"><div class="container"><div class="head reveal"><div class="eyebrow">Onde procurar apoio</div><h2>Se estiver difícil, peça ajuda.</h2><p>Buscar ajuda é cuidado. No Brasil, o CVV oferece apoio emocional e prevenção do suicídio.</p></div><div class="help-card reveal"><div><h2>CVV — Centro de Valorização da Vida</h2><p>Atendimento pelo telefone <strong>188</strong>. Em perigo imediato, procure um serviço de emergência ou uma unidade de saúde.</p><a class="btn primary" href="https://cvv.org.br/" target="_blank" rel="noopener">Conhecer o CVV ↗</a></div><div class="number">188</div></div></div></section>
+
+
+
+<section id="acessibilidade" class="lightgreen">
+ <div class="container">
+  <div class="head reveal">
+   <div class="eyebrow">Acesso à informação</div>
+   <h2>Acessibilidade é parte do cuidado.</h2>
+   <p>O site foi preparado para oferecer caminhos diferentes de acesso ao conteúdo. Use o painel flutuante de acessibilidade para ajustar a leitura.</p>
+  </div>
+  <div class="access-feature-grid">
+   <article class="access-feature reveal"><span aria-hidden="true">🤟</span><h3>Libras</h3><p>O recurso VLibras pode traduzir conteúdos textuais compatíveis para Libras. Ele depende de conexão com a internet.</p><a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/vlibras" target="_blank" rel="noopener noreferrer">Conheça o VLibras</a></article>
+   <article class="access-feature reveal"><span aria-hidden="true">💬</span><h3>Vídeos acessíveis</h3><p>Vídeos devem incluir legendas revisadas, transcrição em texto e, sempre que possível, janela de interpretação em Libras.</p></article>
+   <article class="access-feature reveal"><span aria-hidden="true">⌨️</span><h3>Teclado e leitores de tela</h3><p>Use Tab para avançar, Shift + Tab para voltar e Enter ou Espaço para ativar controles. Os controles têm rótulos e foco visível.</p></article>
+   <article class="access-feature reveal"><span aria-hidden="true">🔎</span><h3>Leitura personalizada</h3><p>Aumente o texto, amplie o espaçamento, destaque links, ative alto contraste ou peça para o navegador ler o texto selecionado.</p></article>
+  </div>
+  <div class="deaf-info reveal">
+   <h3>Para pessoas surdas ou com deficiência auditiva</h3>
+   <p><strong>O conteúdo essencial está disponível em texto.</strong> Nenhuma instrução importante depende exclusivamente de som. Para materiais audiovisuais futuros, ofereça legendas, transcrição e interpretação em Libras quando possível.</p>
+   <div class="visual-steps">
+    <div class="visual-step"><b>01 · Pergunte</b><span>Respeite a forma de comunicação preferida por cada pessoa: Libras, português escrito, leitura labial ou outra forma.</span></div>
+    <div class="visual-step"><b>02 · Facilite</b><span>Converse em local iluminado, de frente, sem falar enquanto se afasta ou cobre a boca.</span></div>
+    <div class="visual-step"><b>03 · Confirme</b><span>Verifique com gentileza se a mensagem foi compreendida. Não presuma que todas as pessoas surdas se comunicam da mesma maneira.</span></div>
+   </div>
+   <div class="visual-alert"><strong>Importante:</strong> tradução automática é um apoio, não substitui um intérprete humano qualificado em situações complexas, formais ou sensíveis.</div>
+  </div>
+  <div class="accessibility-note reveal"><strong>Compromisso de acessibilidade:</strong> este projeto é uma iniciativa educativa. A experiência pode variar conforme o navegador, o dispositivo e as tecnologias assistivas utilizadas. A melhor validação é testar com pessoas com deficiência e corrigir barreiras encontradas.</div>
+ </div>
+</section>
+<section id="aprender" class="learning">
+ <div class="container">
+  <div class="head reveal">
+   <div class="eyebrow">Aprender e praticar</div>
+   <h2>Inclusão se constrói com atitudes.</h2>
+   <p>Pequenas mudanças na comunicação ajudam a tornar escolas, serviços e espaços públicos mais acolhedores.</p>
+  </div>
+  <div class="learn-grid">
+   <article class="learn-card reveal"><span class="learn-icon" aria-hidden="true">🤟</span><h3>Comunicação com pessoas surdas</h3>
+    <ul><li>Pergunte qual forma de comunicação a pessoa prefere.</li><li>Fale de frente, com boa iluminação e sem cobrir a boca.</li><li>Não grite: fale com naturalidade e reformule se necessário.</li><li>Em conversas importantes, ofereça escrita ou intérprete de Libras, conforme a preferência da pessoa.</li></ul>
+   </article>
+   <article class="learn-card reveal"><span class="learn-icon" aria-hidden="true">👁️</span><h3>Comunicação acessível para todos</h3>
+    <ul><li>Use títulos claros e parágrafos curtos.</li><li>Descreva imagens que transmitam informação.</li><li>Não dependa apenas de cores para indicar algo.</li><li>Garanta que links e botões tenham nomes compreensíveis.</li></ul>
+   </article>
+   <article class="learn-card reveal"><span class="learn-icon" aria-hidden="true">🧠</span><h3>Conteúdo fácil de compreender</h3>
+    <ul><li>Explique siglas e palavras difíceis.</li><li>Apresente uma instrução por vez.</li><li>Use exemplos concretos e listas.</li><li>Evite animações rápidas e excesso de informação na tela.</li></ul>
+   </article>
+  </div>
+  <div class="glossary reveal">
+   <div><div class="eyebrow">Glossário rápido</div><h3>Palavras importantes</h3><p>Toque em um termo para ler uma explicação simples.</p></div>
+   <div class="glossary-items">
+    <details><summary>Libras</summary><p>Língua Brasileira de Sinais. É uma língua visual e espacial, com gramática própria; não é apenas uma representação gestual do português.</p></details>
+    <details><summary>Comunidade surda</summary><p>Grupo diverso de pessoas surdas que podem compartilhar experiências, cultura, identidade e formas de comunicação.</p></details>
+    <details><summary>Legenda</summary><p>Texto sincronizado que apresenta falas e informações sonoras relevantes de um vídeo.</p></details>
+    <details><summary>Desenho universal</summary><p>Planejar produtos, serviços e ambientes para que possam ser usados pelo maior número de pessoas possível.</p></details>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="quiz-section">
+ <div class="container">
+  <div class="head reveal"><div class="eyebrow">Teste seus conhecimentos</div><h2>Desafio da inclusão</h2><p>Responda três perguntas rápidas. O exercício funciona sem áudio e pode ser usado com teclado.</p></div>
+  <div class="quiz reveal" id="quiz" aria-labelledby="quizTitle">
+   <h3 id="quizTitle">Qual atitude é mais adequada ao conversar com uma pessoa surda?</h3>
+   <div class="quiz-options" role="group" aria-label="Escolha uma resposta">
+    <button type="button" data-correct="false">Falar muito alto e devagar, sempre.</button>
+    <button type="button" data-correct="true">Perguntar qual forma de comunicação ela prefere.</button>
+    <button type="button" data-correct="false">Falar apenas com o acompanhante.</button>
+   </div>
+   <p id="quizFeedback" class="quiz-feedback" aria-live="polite">Escolha uma opção para ver a explicação.</p>
+   <button type="button" class="btn secondary" id="nextQuestion">Próxima pergunta</button>
+   <p class="quiz-count" id="quizCount">Pergunta 1 de 3</p>
+  </div>
+ </div>
+</section>
+
+
+<section id="seguranca" class="lightgreen">
+ <div class="container">
+  <div class="head">
+   <div class="eyebrow">Privacidade e segurança</div>
+   <h2>Seus dados merecem proteção.</h2>
+   <p>Este site é informativo e não deve pedir senhas, documentos ou dados pessoais sensíveis. A proteção da conexão é configurada na hospedagem, usando HTTPS.</p>
+  </div>
+  <div class="deaf-info">
+   <h3>Como a segurança deve funcionar</h3>
+   <div class="visual-steps">
+    <div class="visual-step"><b>01 · HTTPS</b><span>Criptografa a comunicação entre o navegador e o site quando ele é publicado em um domínio com certificado TLS válido.</span></div>
+    <div class="visual-step"><b>02 · Poucos dados</b><span>Não colete informações pessoais sem necessidade. Se houver formulário, explique a finalidade e peça apenas o mínimo.</span></div>
+    <div class="visual-step"><b>03 · Proteção no servidor</b><span>Se futuramente houver contas ou dados privados, use autenticação segura, controle de acesso e criptografia no servidor.</span></div>
+   </div>
+   <div class="visual-alert"><strong>Criptografia dos recados:</strong> o caderno privado usa AES-256-GCM, com chave derivada da senha por PBKDF2 e salt aleatório. O texto é criptografado no próprio navegador antes de ser salvo; a senha não é enviada ao site. O cofre funciona apenas no mesmo navegador e dispositivo. Guarde sua senha: não há recuperação caso ela seja esquecida. HTTPS continua necessário para proteger a conexão com o site.</div>
+  </div>
+ </div>
+</section>
+
+<section id="faq"><div class="container"><div class="head reveal"><div class="eyebrow">Perguntas frequentes</div><h2>Informação ajuda a cuidar melhor.</h2></div><div class="faq reveal">
+<div class="item"><button class="question" aria-expanded="false">O que é o Setembro Amarelo?<span>+</span></button><div class="answer"><div>É uma campanha de conscientização sobre valorização da vida, prevenção do suicídio, saúde emocional e importância de buscar ajuda.</div></div></div>
+<div class="item"><button class="question" aria-expanded="false">Como conversar com alguém que está sofrendo?<span>+</span></button><div class="answer"><div>Comece com cuidado, escute sem julgar e demonstre que você está disponível. Se houver risco, procure ajuda profissional ou de emergência.</div></div></div>
+<div class="item"><button class="question" aria-expanded="false">E se eu não souber o que dizer?<span>+</span></button><div class="answer"><div>Você pode ser sincero: “Eu me importo com você. Quer conversar?” Não é necessário ter uma solução pronta para oferecer companhia e escuta.</div></div></div>
+</div></div></section>
+
+
+<section id="recados" class="lightgreen">
+ <div class="container">
+  <div class="head reveal"><div class="eyebrow">Um espaço só seu</div><h2>Seu caderno de palavras de apoio.</h2><p>Escreva mensagens para si ou para alguém querido. Os recados ficam criptografados neste navegador e só podem ser abertos com sua senha.</p></div>
+  <div class="vault-card reveal">
+   <div class="vault-top"><div><h3>🔐 Cofre de recados</h3><p id="vaultStatus" aria-live="polite">Crie uma senha para proteger seu caderno.</p></div><span class="vault-lock" aria-hidden="true">AES-256-GCM</span></div>
+   <div id="vaultSetup" class="vault-form">
+    <label for="vaultPassword">Senha do seu cofre</label><input id="vaultPassword" type="password" autocomplete="new-password" minlength="8" placeholder="Use pelo menos 8 caracteres">
+    <label for="vaultPasswordConfirm">Confirme sua senha</label><input id="vaultPasswordConfirm" type="password" autocomplete="new-password" placeholder="Digite a senha novamente">
+    <button class="btn primary" id="createVault" type="button">Criar meu cofre</button>
+    <p class="vault-hint">Escolha uma senha forte e guarde-a em um local seguro. Ela não é enviada para nenhum servidor.</p>
+   </div>
+   <div id="vaultUnlock" class="vault-form" hidden>
+    <label for="unlockPassword">Digite sua senha para abrir os recados</label><input id="unlockPassword" type="password" autocomplete="current-password" placeholder="Sua senha">
+    <button class="btn primary" id="unlockVault" type="button">Desbloquear</button>
+   </div>
+   <div id="vaultContents" hidden>
+    <div class="vault-form"><label for="noteTitle">Título (opcional)</label><input id="noteTitle" maxlength="70" placeholder="Ex.: Para um dia difícil">
+     <label for="noteText">Escreva seu recado</label><textarea id="noteText" rows="5" maxlength="3000" placeholder="Deixe aqui palavras de carinho, esperança ou um lembrete gentil..."></textarea>
+     <button class="btn primary" id="saveNote" type="button">Criptografar e guardar recado</button>
+    </div>
+    <div class="vault-list-head"><h4>Seus recados</h4><button type="button" class="btn secondary" id="lockVault">Bloquear cofre</button></div>
+    <div id="notesList" class="notes-list" aria-live="polite"></div>
+   </div>
+   <p class="vault-warning"><strong>Importante:</strong> os recados ficam apenas neste navegador e dispositivo. Limpar os dados do navegador pode apagá-los. Se esquecer a senha, não será possível recuperar os recados. Não use este espaço para emergências nem inclua dados pessoais ou informações que possam colocar alguém em risco.</p>
+  </div>
+  <div class="vault-help"><strong>Precisa conversar com alguém agora?</strong> Este caderno não é monitorado e ninguém recebe alertas. No Brasil, ligue 188 (CVV), gratuitamente, para apoio emocional. Em perigo imediato, procure uma emergência ou unidade de saúde.</div>
+ </div>
+</section>
+
+<section class="final"><div class="container"><div class="final-box reveal"><h2>Falar é um começo.</h2><p>Compartilhe informação. Ofereça escuta. Incentive ajuda. O cuidado não pertence a um único mês.</p><a class="btn" style="background:var(--yellow);border-color:var(--yellow)" href="#inicio">Voltar ao início ↑</a></div></div></section>
+</main>
+<footer><div class="container foot"><span><strong>Setembro Amarelo</strong> — informação, escuta e acolhimento.</span><span>Conteúdo educativo. Não substitui atendimento profissional.</span></div></footer>
+
+
+<div class="access-tools">
+ <div class="access-panel" id="accessPanel" aria-label="Painel de acessibilidade">
+  <strong>Personalize sua experiência</strong>
+  <div class="tool-group"><strong>Tamanho do texto</strong><div class="tool-row">
+   <button type="button" id="fontDown" aria-label="Diminuir texto">A−</button>
+   <button type="button" id="fontReset" aria-label="Tamanho padrão">A</button>
+   <button type="button" id="fontUp" aria-label="Aumentar texto">A+</button>
+  </div></div>
+  <div class="tool-group"><strong>Visualização e leitura</strong>
+   <button type="button" id="contrastBtn" aria-pressed="false">Alto contraste</button>
+   <button type="button" id="spacingBtn" aria-pressed="false">Maior espaçamento</button>
+   <button type="button" id="linksBtn" aria-pressed="false">Destacar links</button>
+   <button type="button" id="dyslexiaBtn" aria-pressed="false">Leitura facilitada</button>
+   <button type="button" id="motionBtn" aria-pressed="false">Reduzir movimentos</button>
+  </div>
+  <div class="tool-group"><strong>Ouvir conteúdo</strong>
+   <button type="button" id="readBtn">▶ Ler conteúdo principal</button>
+   <button type="button" id="stopReadBtn">■ Parar leitura</button>
+   <span id="readStatus" aria-live="polite">A leitura por voz usa os recursos do seu navegador.</span>
+  </div>
+  <div class="tool-group"><button type="button" class="reset-btn" id="resetAccess">Restaurar configurações</button></div>
+  <a href="#acessibilidade" class="btn secondary">Ver recursos de acessibilidade</a>
+ </div>
+ <button class="access-toggle" id="accessToggle" type="button" aria-expanded="false" aria-controls="accessPanel">Acessibilidade ⚙</button>
+</div>
+<div vw class="enabled">
+ <div vw-access-button class="active"></div>
+ <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<button id="top" aria-label="Voltar ao topo">↑</button>
+
+<script>
+(function(){
+"use strict";
+var header=document.getElementById("header"),topBtn=document.getElementById("top");
+var menu=document.getElementById("menu"),nav=document.getElementById("nav");
+function scrollState(){header.classList.toggle("scrolled",window.scrollY>30);topBtn.style.display=window.scrollY>550?"grid":"none"}
+window.addEventListener("scroll",scrollState,{passive:true});scrollState();
+topBtn.addEventListener("click",function(){window.scrollTo({top:0,behavior:document.body.classList.contains("reduce-motion")?"auto":"smooth"})});
+menu.addEventListener("click",function(){var open=nav.classList.toggle("navlinks-open");menu.setAttribute("aria-expanded",String(open));menu.setAttribute("aria-label",open?"Fechar menu":"Abrir menu")});
+nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("navlinks-open");menu.setAttribute("aria-expanded","false");menu.setAttribute("aria-label","Abrir menu")})});
+if("IntersectionObserver" in window){
+ var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show");observer.unobserve(e.target)}})},{threshold:.08});
+ document.querySelectorAll(".reveal").forEach(function(e){observer.observe(e)});
+}else{document.querySelectorAll(".reveal").forEach(function(e){e.classList.add("show")})}
+document.querySelectorAll(".question").forEach(function(q){q.addEventListener("click",function(){var item=q.parentElement;document.querySelectorAll(".item").forEach(function(x){if(x!==item){x.classList.remove("open");var b=x.querySelector(".question");if(b)b.setAttribute("aria-expanded","false")}});item.classList.toggle("open");q.setAttribute("aria-expanded",String(item.classList.contains("open")))})});
+
+var accessToggle=document.getElementById("accessToggle"),accessPanel=document.getElementById("accessPanel");
+accessToggle.addEventListener("click",function(){var open=accessPanel.classList.toggle("open");accessToggle.setAttribute("aria-expanded",String(open))});
+var fontScale=1;
+function setPressed(id,on){var el=document.getElementById(id);if(el)el.setAttribute("aria-pressed",String(on))}
+function toggleClass(id,cls){var el=document.getElementById(id);el.addEventListener("click",function(){var on=document.body.classList.toggle(cls);setPressed(id,on)})}
+toggleClass("contrastBtn","high-contrast");
+toggleClass("spacingBtn","extra-spacing");
+toggleClass("linksBtn","link-highlight");
+toggleClass("dyslexiaBtn","dyslexia-friendly");
+toggleClass("motionBtn","reduce-motion");
+function applyFont(){document.documentElement.style.fontSize=(16*fontScale)+"px"}
+document.getElementById("fontUp").addEventListener("click",function(){fontScale=Math.min(1.5,fontScale+.1);applyFont()});
+document.getElementById("fontDown").addEventListener("click",function(){fontScale=Math.max(.85,fontScale-.1);applyFont()});
+document.getElementById("fontReset").addEventListener("click",function(){fontScale=1;applyFont()});
+document.getElementById("resetAccess").addEventListener("click",function(){
+ ["high-contrast","extra-spacing","link-highlight","dyslexia-friendly","reduce-motion"].forEach(function(c){document.body.classList.remove(c)});
+ ["contrastBtn","spacingBtn","linksBtn","dyslexiaBtn","motionBtn"].forEach(function(id){setPressed(id,false)});
+ fontScale=1;applyFont();stopSpeech();
+});
+var readBtn=document.getElementById("readBtn"),stopReadBtn=document.getElementById("stopReadBtn"),readStatus=document.getElementById("readStatus");
+function stopSpeech(){if("speechSynthesis" in window)window.speechSynthesis.cancel();readStatus.textContent="Leitura interrompida."}
+readBtn.addEventListener("click",function(){
+ if(!("speechSynthesis" in window)){readStatus.textContent="Seu navegador não oferece leitura por voz. Use um leitor de tela do sistema.";return}
+ window.speechSynthesis.cancel();
+ var main=document.querySelector("main");
+ var text=(main.innerText||main.textContent).replace(/\s+/g," ").trim();
+ var utterance=new SpeechSynthesisUtterance(text);utterance.lang="pt-BR";
+ utterance.onstart=function(){readStatus.textContent="Lendo o conteúdo principal…"};
+ utterance.onend=function(){readStatus.textContent="Leitura concluída."};
+ utterance.onerror=function(){readStatus.textContent="Não foi possível iniciar a leitura neste navegador."};
+ window.speechSynthesis.speak(utterance);
+});
+stopReadBtn.addEventListener("click",stopSpeech);
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){accessPanel.classList.remove("open");accessToggle.setAttribute("aria-expanded","false");nav.classList.remove("navlinks-open");menu.setAttribute("aria-expanded","false")}});
+
+/* Cofre local de recados: PBKDF2 + AES-256-GCM via Web Crypto */
+var vaultKey=null, vaultNotes=[];
+var vaultStoreKey="setembroAmarelo_private_vault_v1";
+var vaultStatus=document.getElementById("vaultStatus"),vaultSetup=document.getElementById("vaultSetup"),vaultUnlock=document.getElementById("vaultUnlock"),vaultContents=document.getElementById("vaultContents");
+function bytesToB64(bytes){var bin="";bytes.forEach(function(b){bin+=String.fromCharCode(b)});return btoa(bin)}
+function b64ToBytes(value){var bin=atob(value),out=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)out[i]=bin.charCodeAt(i);return out}
+function randomBytes(n){var a=new Uint8Array(n);crypto.getRandomValues(a);return a}
+async function deriveVaultKey(password,salt){var material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveKey"]);return crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:310000,hash:"SHA-256"},material,{name:"AES-GCM",length:256},false,["encrypt","decrypt"])}
+function showVaultState(state){vaultSetup.hidden=state!=="setup";vaultUnlock.hidden=state!=="unlock";vaultContents.hidden=state!=="open"}
+async function persistVault(){var iv=randomBytes(12),plain=new TextEncoder().encode(JSON.stringify(vaultNotes));var encrypted=await crypto.subtle.encrypt({name:"AES-GCM",iv:iv},vaultKey,plain);var old=JSON.parse(localStorage.getItem(vaultStoreKey)||"null");localStorage.setItem(vaultStoreKey,JSON.stringify({version:1,salt:old.salt,iv:bytesToB64(iv),data:bytesToB64(new Uint8Array(encrypted))}))}
+function renderVaultNotes(){var list=document.getElementById("notesList");list.replaceChildren();if(!vaultNotes.length){var empty=document.createElement("p");empty.textContent="Seu caderno ainda está vazio. Você pode começar com uma mensagem gentil.";list.appendChild(empty);return}vaultNotes.slice().reverse().forEach(function(note,index){var card=document.createElement("article");card.className="note-card";var title=document.createElement("h5");title.textContent=note.title||"Recado";var body=document.createElement("p");body.textContent=note.text;var date=document.createElement("small");date.textContent="Guardado em "+new Date(note.created).toLocaleString("pt-BR");var del=document.createElement("button");del.type="button";del.textContent="Apagar este recado";del.addEventListener("click",async function(){if(!confirm("Apagar este recado definitivamente?"))return;vaultNotes.splice(vaultNotes.length-1-index,1);await persistVault();renderVaultNotes()});card.append(title,body,date,del);list.appendChild(card)})}
+function lockVault(){vaultKey=null;vaultNotes=[];document.getElementById("unlockPassword").value="";document.getElementById("noteTitle").value="";document.getElementById("noteText").value="";showVaultState("unlock");vaultStatus.textContent="Cofre bloqueado. Digite sua senha para acessar."}
+var savedVault=localStorage.getItem(vaultStoreKey);if(!window.crypto||!crypto.subtle||!window.isSecureContext){vaultStatus.textContent="A criptografia precisa de um navegador atualizado e de uma conexão segura (HTTPS ou localhost).";showVaultState("setup");document.getElementById("createVault").disabled=true}else{showVaultState(savedVault?"unlock":"setup");vaultStatus.textContent=savedVault?"Seu cofre está protegido. Desbloqueie com sua senha.":"Crie uma senha para proteger seu caderno."}
+document.getElementById("createVault").addEventListener("click",async function(){var pass=document.getElementById("vaultPassword").value,confirmPass=document.getElementById("vaultPasswordConfirm").value;if(pass.length<8){alert("Use uma senha com pelo menos 8 caracteres.");return}if(pass!==confirmPass){alert("As senhas não coincidem.");return}try{var salt=randomBytes(16);vaultKey=await deriveVaultKey(pass,salt);vaultNotes=[];var iv=randomBytes(12),cipher=await crypto.subtle.encrypt({name:"AES-GCM",iv:iv},vaultKey,new TextEncoder().encode("[]"));localStorage.setItem(vaultStoreKey,JSON.stringify({version:1,salt:bytesToB64(salt),iv:bytesToB64(iv),data:bytesToB64(new Uint8Array(cipher))}));document.getElementById("vaultPassword").value="";document.getElementById("vaultPasswordConfirm").value="";showVaultState("open");vaultStatus.textContent="Cofre aberto. Seus recados serão criptografados antes de serem guardados.";renderVaultNotes()}catch(e){vaultStatus.textContent="Não foi possível criar o cofre neste navegador.";console.error(e)}});
+document.getElementById("unlockVault").addEventListener("click",async function(){var pass=document.getElementById("unlockPassword").value;try{var record=JSON.parse(localStorage.getItem(vaultStoreKey));if(!record||record.version!==1)throw new Error("Cofre não encontrado");vaultKey=await deriveVaultKey(pass,b64ToBytes(record.salt));var plain=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64ToBytes(record.iv)},vaultKey,b64ToBytes(record.data));vaultNotes=JSON.parse(new TextDecoder().decode(plain));document.getElementById("unlockPassword").value="";showVaultState("open");vaultStatus.textContent="Cofre desbloqueado. Seus recados foram descriptografados apenas nesta sessão.";renderVaultNotes()}catch(e){vaultKey=null;vaultNotes=[];vaultStatus.textContent="Senha incorreta ou dados criptografados danificados. Tente novamente."}});
+document.getElementById("saveNote").addEventListener("click",async function(){var text=document.getElementById("noteText").value.trim(),title=document.getElementById("noteTitle").value.trim();if(!vaultKey){vaultStatus.textContent="Desbloqueie o cofre antes de guardar recados.";return}if(!text){alert("Escreva uma mensagem antes de guardar.");return}try{vaultNotes.push({title:title,text:text,created:new Date().toISOString()});await persistVault();document.getElementById("noteTitle").value="";document.getElementById("noteText").value="";renderVaultNotes();vaultStatus.textContent="Recado criptografado e guardado neste dispositivo."}catch(e){vaultNotes.pop();vaultStatus.textContent="Não foi possível guardar o recado. Verifique o espaço disponível no navegador."}});
+document.getElementById("lockVault").addEventListener("click",lockVault);
+
+/* Pequeno quiz educativo */
+var questions=[
+ {title:"Qual atitude é mais adequada ao conversar com uma pessoa surda?",answers:["Falar muito alto e devagar, sempre.","Perguntar qual forma de comunicação ela prefere.","Falar apenas com o acompanhante."],correct:1,explain:"Isso mesmo! A pessoa é quem pode dizer se prefere Libras, português escrito, leitura labial ou outra forma."},
+ {title:"O que um vídeo acessível deve oferecer?",answers:["Apenas música de fundo.","Legendas sincronizadas e, quando possível, transcrição e Libras.","Som mais alto."],correct:1,explain:"Correto! Legendas, transcrição e Libras oferecem diferentes formas de acesso à informação."},
+ {title:"Como tornar uma página mais fácil de usar?",answers:["Usar só cores para transmitir avisos.","Esconder os títulos para deixar a página limpa.","Organizar títulos, textos claros e navegação por teclado."],correct:2,explain:"Perfeito! Estrutura clara, linguagem simples e teclado ajudam muitas pessoas."}
+];
+var qi=0,answered=false,quizTitle=document.getElementById("quizTitle"),quizOptions=document.querySelector(".quiz-options"),quizFeedback=document.getElementById("quizFeedback"),quizCount=document.getElementById("quizCount"),next=document.getElementById("nextQuestion");
+function renderQuestion(){var q=questions[qi];answered=false;quizTitle.textContent=q.title;quizOptions.innerHTML="";q.answers.forEach(function(answer,i){var b=document.createElement("button");b.type="button";b.textContent=answer;b.addEventListener("click",function(){if(answered)return;answered=true;var ok=i===q.correct;b.classList.add(ok?"correct":"incorrect");quizOptions.querySelectorAll("button").forEach(function(btn){btn.disabled=true});quizFeedback.textContent=(ok?"Resposta correta! ":"Não é essa. ")+q.explain});quizOptions.appendChild(b)});quizFeedback.textContent="Escolha uma opção para ver a explicação.";quizCount.textContent="Pergunta "+(qi+1)+" de "+questions.length;next.textContent=qi===questions.length-1?"Recomeçar desafio":"Próxima pergunta"}
+next.addEventListener("click",function(){qi=(qi+1)%questions.length;renderQuestion()});renderQuestion();
+})();
+</script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+window.addEventListener("load",function(){
+ if(window.VLibras){try{new window.VLibras.Widget("https://vlibras.gov.br/app")}catch(e){console.warn("VLibras indisponível",e)}}
+});
+</script>
+
+</body>
+</html>
